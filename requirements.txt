@@ -1,0 +1,7 @@
+qdrant-client
+openai
+torch
+torchaudio
+nemo_toolkit[asr]
+pydub
+python-dotenv
