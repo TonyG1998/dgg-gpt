@@ -12,7 +12,7 @@ qdrant = QdrantClient(host=os.getenv("QDRANT_HOST", "localhost"), port=6333)
 
 # ── 1. Show how each diarization label mapped across VODs ─────────────────────
 
-def show_global_speaker_coverage():
+def show_global_speaker_coverage(top: int = None):
     """
     Show all global speakers sorted by total segment count (most prevalent first).
     Includes per-VOD breakdown with diarization labels and confidence.
@@ -72,6 +72,9 @@ def show_global_speaker_coverage():
     print(f"\n{'Rank':<6} {'Display Name':<25} {'Total Segs':>11} "
           f"{'VODs':>6} {'% All Segs':>11}")
     print("=" * 65)
+
+    if top:
+        top = totals[:top]
 
     for rank, t in enumerate(totals, 1):
         named = t["display_name"] if not t["display_name"].startswith("spk_") \
