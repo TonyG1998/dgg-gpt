@@ -1,39 +1,35 @@
-# Environment & secrets
+# Secrets
 .env
 
-# Python
+# Python bytecode
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.Python
 
-# Virtual environment — excluded from git, reproduced via requirements.txt
+# Virtual environment — use requirements.txt instead
 venv/
 
-# Audio/media files — too large, not source code
+# Audio/media
 *.m4a
 *.mp3
 *.wav
 *.mp4
 
-# Database — runtime data, not source code
+# Database — runtime data
 *.db
 *.db-shm
 *.db-wal
 
-# ML model cache — downloaded automatically by NeMo/HuggingFace
+# ML model cache
 .cache/
 *.nemo
 
-# Logs & temp files
+# Logs and temp output
 *.log
+*.txt
 /tmp/
 
 # OS
 .DS_Store
 Thumbs.db
-
-.env
-app.log
-app.log
