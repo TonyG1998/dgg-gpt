@@ -1,0 +1,36 @@
+# Environment & secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment — excluded from git, reproduced via requirements.txt
+venv/
+
+# Audio/media files — too large, not source code
+*.m4a
+*.mp3
+*.wav
+*.mp4
+
+# Database — runtime data, not source code
+*.db
+*.db-shm
+*.db-wal
+
+# ML model cache — downloaded automatically by NeMo/HuggingFace
+.cache/
+*.nemo
+
+# Logs & temp files
+*.log
+/tmp/
+
+# OS
+.DS_Store
+Thumbs.db
+
