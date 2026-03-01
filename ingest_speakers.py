@@ -51,9 +51,9 @@ def resolve_speakers_for_vod(vod_id: int):
     audio_available = os.path.exists(audio_path)
     log.info(f"  Audio: {'found' if audio_available else 'NOT FOUND'}")
 
-    for row in unique_labels:
+    for i, row in enumerate(unique_labels, 1):
         label = row["diarization_label"]
-        log.info(f"  Processing '{label}'...")
+        log.info(f"  [{i}/{len(unique_labels)}] '{label}'...")
         global_id = None
         display_name = None
         score = 0.0
